@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 number = 98
-print(f"{number} Battery street \n")
+print("{:d} Battery street \n".format(number))
