@@ -3,7 +3,7 @@
 
 if __name__ == "__main__":
     """Print the sum of 1 and 2."""
-    import add_it as add
+    import add_0 as add
 
     a = 1
     b = 2
