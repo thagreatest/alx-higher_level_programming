@@ -1,18 +1,19 @@
 #!/usr/bin/python3
-from sys import argv
+from sys import argv as args
 
 
-def principal():
-    print('{} argument'.format(len(argv) - 1), end='')
-    if len(argv) == 1:
-        print('s.')
-    elif len(argv) == 2:
-        print(':')
+def commandline_args():
+    if len(args) < 2:
+        print("{} arguments.".format(0))
+    elif len(args) == 2:
+        print("{} argument:".format(len(args[1:])))
+        for count, arg in enumerate(args[1:], start=1):
+            print("{}: {}".format(count, arg))
     else:
-        print('s:')
-    for i in range(1, len(argv)):
-        print('{}: {}'.format(i, argv[i]))
+        print("{} arguments:".format(len(args[1:])))
+        for count, arg in enumerate(args[1:], start=1):
+            print("{}: {}".format(count, arg))
 
 
 if __name__ == "__main__":
-    principal()
+    commandline_args()
