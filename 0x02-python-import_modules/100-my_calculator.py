@@ -5,7 +5,7 @@ def calculator():
     from calculator_1 import add, sub, mul, div
 
     args = sys.argv
-    if len(args[1:]) != 3:
+    if len(args[1:]) - 1 != 3:
         print("Usage: {} <a> <operator> <b>".format(args[0]))
         sys.exit(1)
     if args[2] not in ['+', '-', "*", '/']:
