@@ -1,19 +1,15 @@
 #!/usr/bin/python3
 from sys import argv as args
 
+if __name__ ==  '__main__':
 
-def commandline_args():
-    if len(args) < 2:
-        print("{} arguments.".format(0))
-    elif len(args) == 2:
-        print("{} argument:".format(len(args[1:])))
-        for count, arg in enumerate(args[1:], start=1):
-            print("{}: {}".format(count, arg))
+    count = len(args) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
     else:
-        print("{} arguments:".format(len(args[1:])))
-        for count, arg in enumerate(args[1:], start=1):
-            print("{}: {}".format(count, arg))
+        print("{} arguments:".format(count))
+    for i in count:
+        print("{}: {}".format(i + 1, args[i + 1]))
 
-
-if __name__ == "__main__":
-    commandline_args()
