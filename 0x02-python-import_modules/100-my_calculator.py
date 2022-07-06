@@ -7,10 +7,10 @@ def calculator():
     args = sys.argv
     if len(args[1:]) != 3:
         print("Usage: {} <a> <operator> <b>".format(args[0]))
-        exit(1)
+        sys.exit(1)
     if args[2] not in ['+', '-', "*", '/']:
         print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
+        sys.exit(1)
 
     a, operator,  b = int(args[1]), args[2], int(args[3])
     if operator == "+":
