@@ -21,7 +21,3 @@ def calculator():
         print("{} {} {} = {}".format(a, operator, b, mul(a, b)))
     else:
         print("{} {} {} = {}".format(a, operator, b, div(a, b)))
-
-
-if __name__ == "__main__":
-    calculator()
