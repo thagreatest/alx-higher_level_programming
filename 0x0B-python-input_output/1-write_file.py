@@ -1,4 +1,4 @@
-#!/usr/bin/pyython3
+#!/usr/bin/python3
 """file reader"""
 
 def write_file(filename="", text=""):
